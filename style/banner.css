@@ -164,7 +164,7 @@ a:hover {
 
 
     }
-
+ 
     #slogan {
         font-size: 28pt;
         text-align: center;
@@ -258,6 +258,10 @@ a:hover {
 @media (width <=1200px) {
     #title {
         width: 90%;
+    }
+
+    .gradient{
+        z-index: 10;
     }
 
     .containBtnSlogan {
