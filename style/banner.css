@@ -26,6 +26,18 @@ a {
 
 }
 
+
+a:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px 1px rgb(235 13 13);
+
+}
+
+#btn1:hover {
+    box-shadow: inset 0 0 30px 1px rgb(36, 3, 3);
+}
+
+
 .adContainer {
     position: relative;
     border-radius: var(--brdRadius);
@@ -42,6 +54,11 @@ a {
 
 }
 
+.titleContainMobile {
+    display: none;
+}
+
+
 #title {
     position: absolute;
     height: 60px;
@@ -57,6 +74,11 @@ a {
     left: 0;
     background-color: transparent;
     z-index: 9;
+}
+
+#carMobile {
+    background-color: transparent;
+    display: none;
 }
 
 .gradient {
@@ -149,9 +171,88 @@ a {
     }
 
     .linkBtn {
+
         width: 300px;
     }
 }
+
+@media (width <=780px) {
+    #title {
+        display: none;
+    }
+
+    .containBtnSlogan {
+        display: none;
+    }
+
+    .adContainer {
+        position: relative;
+        margin: 0;
+        border-radius: 0;
+        height: 500px;
+
+    }
+
+    #car {
+        display: none;
+    }
+
+    #carMobile {
+        position: absolute;
+        bottom: 0;
+
+        display: block;
+        width: 100%;
+    }
+
+    .titleContainMobile {
+        margin: 15px 0;
+        display: block;
+        position: absolute;
+        background: transparent;
+        z-index: 13;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #titleMbl,
+    #sloganMbl {
+        background: transparent;
+        font-size: 90%;
+        width: 90%;
+    }
+
+    #sloganMbl {
+        text-align: center;
+        text-transform: uppercase;
+
+    }
+
+    .linkBtn {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 300%;
+        z-index: 16;
+        margin-top: 30px;
+    }
+
+
+    .gradient {
+
+        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.6054796918767507) 57%, rgba(255, 255, 255, 0) 100%);
+    }
+
+
+}
+
+
+
+
+
 
 
 @media (width <=1200px) {
@@ -170,8 +271,4 @@ a {
 
     }
 
-}
-
-@media (width <= 700){
-    
 }
